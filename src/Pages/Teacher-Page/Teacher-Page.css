@@ -1,0 +1,9 @@
+.teacher-page-container {
+    margin-top: 300px;
+}
+
+@media only screen and (max-width: 625px) {
+    .teacher-page-container {
+        margin: 0;
+    }
+}

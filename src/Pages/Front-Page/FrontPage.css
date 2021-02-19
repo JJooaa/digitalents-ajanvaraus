@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+.front-page-container {
+    margin: 0 auto;
+    padding-top: 300px;
+    width: 633px;
+    height: 500px;
+}
+
+.digi-h1 {
+    text-align: center;
+    font-family: "Nunito", sans-serif;
+    font-size: 45px;
+}
+
+.digi-h3 {
+    text-align: center;
+    font-weight: lighter;
+    padding-bottom: 20px;
+}
+
+.img {
+    margin-left: 20px;
+}

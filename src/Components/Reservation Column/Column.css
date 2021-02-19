@@ -1,0 +1,43 @@
+.reservation-column {
+    width: 273px;
+    height: auto;
+    border: 2px solid black;
+}
+
+.date-container {
+
+}
+
+.choose-time-container {
+    border: 2px solid black;
+    width: 230px;
+    height: 53px;
+    margin: 15px auto;
+}
+
+.choose-button {
+    background-color: lightslategray;
+    width: 100px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    margin-left: 15px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+
+
+.column-p {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.date-p {
+    text-align: center;
+    margin: 5px;
+}
+
+.cp {
+    margin-top: 4px;
+}
