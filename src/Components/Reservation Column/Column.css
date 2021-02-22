@@ -2,10 +2,7 @@
     width: 273px;
     height: auto;
     border: 2px solid black;
-}
-
-.date-container {
-
+    background-color: wheat;
 }
 
 .choose-time-container {
@@ -13,24 +10,13 @@
     width: 230px;
     height: 53px;
     margin: 15px auto;
+    background-color: whitesmoke;
 }
 
-.choose-button {
-    background-color: lightslategray;
-    width: 100px;
-    height: 30px;
-    display: inline-block;
-    text-align: center;
-    margin-left: 15px;
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-
-
-.column-p {
+.reservation-p {
     display: inline-block;
     margin-left: 20px;
+    width: 115px;
 }
 
 .date-p {
@@ -38,6 +24,23 @@
     margin: 5px;
 }
 
-.cp {
-    margin-top: 4px;
+.reservation-container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.varaa-nappula {
+    display: inline;
+    width: 115px;
+    padding: 6px;
+    margin-left: 5px;
+    background-color: rgb(191, 211, 216);
+    transition: background-color 0.2s ease-in;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.varaa-nappula:hover {
+    background-color: violet;
 }

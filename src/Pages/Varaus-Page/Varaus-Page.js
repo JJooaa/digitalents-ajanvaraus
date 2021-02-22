@@ -1,11 +1,11 @@
 import React from "react";
-import Column from "../../Components/Reservation Column/Column";
+import "./Varaus-Page.css";
+import Reservations from "../../Components/Reservations/Reservations";
 
 const VarausPage = () => {
     return (
-        <div>
-            <h1>Varaus page!</h1>
-            <Column />
+        <div className="xcontainer">
+            <Reservations />
         </div>
     )
 };

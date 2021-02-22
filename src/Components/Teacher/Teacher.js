@@ -13,7 +13,7 @@ const Teacher = () => {
                     <div className="teacher-picture">
                         
                     </div>
-                    <div className="valitse-button">
+                    <div className="valitse-teacher-button">
                         <p className="valitse-button-p">Valitse</p>
                     </div>
                 </div>
