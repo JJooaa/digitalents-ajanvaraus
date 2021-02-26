@@ -6,7 +6,7 @@ import VarausPage from "../../Pages/Varaus-Page/Varaus-Page";
 import FormPage from "../../Pages/Form-Page/Form-Page";
 
 const App = () => {
-    const [display, setDisplay] = useState(0);
+    const [display, setDisplay] = useState(2);
     return (
         <div>
             {display === 0 ? <FrontPage /> : null}
