@@ -2,7 +2,6 @@
     width: 273px;
     height: auto;
     border: 2px solid black;
-    background-color: wheat;
 }
 
 .choose-time-container {
@@ -35,12 +34,12 @@
     width: 115px;
     padding: 6px;
     margin-left: 5px;
-    background-color: rgb(191, 211, 216);
+    background-color: lightgray;
     transition: background-color 0.2s ease-in;
     cursor: pointer;
     border: 1px solid black;
 }
 
 .varaa-nappula:hover {
-    background-color: violet;
+    background-color: rgb(110, 110, 110);
 }

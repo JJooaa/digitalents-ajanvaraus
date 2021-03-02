@@ -3,10 +3,10 @@ import "./Teacher-Page.css";
 import Teacher from "../../Components/Teacher/Teacher";
 import { getTeachersFromServer } from "../../util/Api";
 
-const TeacherPage = () => {
+const TeacherPage = (props) => {
     return (
         <div className="teacher-page-container">
-            <Teacher />
+            <Teacher setDisplay={props.setDisplay}/>
             <button onClick={() => getTeachersFromServer()}>
                 get teachers
             </button>

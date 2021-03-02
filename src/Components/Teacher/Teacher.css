@@ -17,6 +17,11 @@
     height: 50px;
     border: 2px solid black;
     margin: 15px auto;
+    transition: background-color 0.2s ease-out;
+}
+
+.valitse-teacher-button:hover {
+    background-color: lightslategray;
 }
 
 .valitse-button-p {

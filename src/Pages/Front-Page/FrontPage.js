@@ -5,13 +5,13 @@ import newlogo from "../../images/newlogo.png";
 
 //<img src="https://digitalentshelsinki.fi/static/DT_pysty_white.png" />
 
-const FrontPage = () => {
+const FrontPage = (props) => {
     return (
         <div className="front-page-container">
             {/* <h1 className="digi-h1">Digitalents Academy</h1> */}
             <img src={newlogo} alt="logo" />
             <h3 className="digi-h3">Ajanvaraus järjestelmä pajalaisille.</h3>
-            <StartButton />
+            <StartButton setDisplay={props.setDisplay}/>
         </div>
     );
 };
