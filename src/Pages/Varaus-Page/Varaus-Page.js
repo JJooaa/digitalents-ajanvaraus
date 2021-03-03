@@ -4,7 +4,6 @@ import Column from "../../Components/Reservation Column/Column";
 import { getTeacherById } from "../../util/Api";
 
 const VarausPage = (props) => {
-    const [data, setData] = useState([]);
     const [week, setWeek] = useState({
         Monday: [],
         Tuesday: [],
@@ -13,13 +12,11 @@ const VarausPage = (props) => {
         Friday: [],
     });
 
-    useEffect(() => {
-        getTeacherById(2, 0, setData);
-    }, [])
-
-    const sortDays = () => {
+    const sortDays = (response) => {
+        let responseArray = [];
+        responseArray.push(response);
         let prevstate = {...week};
-        data.map((time) => {
+        responseArray[0].map((time) => {
             if (time.weekday === "Monday") {
                 prevstate.Monday.push(time);
             } else if (time.weekday === "Tuesday") {
@@ -37,17 +34,13 @@ const VarausPage = (props) => {
         setWeek(prevstate);
     };
 
+    useEffect(() => {
+        getTeacherById(2, 0, sortDays);
+    }, [])
+
+
     return (
         <div className="xcontainer">
-            <button onClick={() => getTeacherById(2, 0, setData)}>
-                Step 1, make the api Call and add to State Data
-            </button>
-            <button onClick={() => sortDays()}>
-                Step 2, Sort days and add them to week Object
-            </button>
-            <button onClick={() => console.log(week)}>
-                Step 3, Show Week Object with new dates
-            </button>
             <Column setDisplay={props.setDisplay} week={week} />
         </div>
     );

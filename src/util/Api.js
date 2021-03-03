@@ -13,7 +13,7 @@ export const getTeachersFromServer = () => {
         });
 };
 
-export const getTeacherById = (teacherId, weeknum, setData) => {
+export const getTeacherById = (teacherId, weeknum, sortDays) => {
     axios
         .get(
             `https://reservation.spudro.club/api/reservabletimes/week/${teacherId}/${weeknum}`,
@@ -22,8 +22,7 @@ export const getTeacherById = (teacherId, weeknum, setData) => {
             }
         )
         .then((response) => {
-            setData(response.data);
-            return response.data;
+            sortDays(response.data);
         })
         .catch((error) => {
             console.log(error);
