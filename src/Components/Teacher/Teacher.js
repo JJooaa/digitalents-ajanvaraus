@@ -1,9 +1,10 @@
 import React from "react";
 import "./Teacher.css";
+import { getTeacherById } from "../../util/Api";
 
 const Teacher = (props) => {
     const teacherArray = ["Arto", "Else", "Tuukka", "Nina"];
-
+    
     return (
         <div className="teacher-flex-container">
             {teacherArray.map((teacher) => {

@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./Varaus-Page.css";
 import Column from "../../Components/Reservation Column/Column";
 import { getTeacherById } from "../../util/Api";
 
 const VarausPage = (props) => {
     const [data, setData] = useState([]);
-    const [mounted, setMounted] = useState(true);
     const [week, setWeek] = useState({
         Monday: [],
         Tuesday: [],
@@ -14,22 +13,28 @@ const VarausPage = (props) => {
         Friday: [],
     });
 
+    useEffect(() => {
+        getTeacherById(2, 0, setData);
+    }, [])
+
     const sortDays = () => {
+        let prevstate = {...week};
         data.map((time) => {
             if (time.weekday === "Monday") {
-                week.Monday.push(time);
+                prevstate.Monday.push(time);
             } else if (time.weekday === "Tuesday") {
-                week.Tuesday.push(time);
+                prevstate.Tuesday.push(time);
             } else if (time.weekday === "Wednesday") {
-                week.Wednesday.push(time);
+                prevstate.Wednesday.push(time);
             } else if (time.weekday === "Thursday") {
-                week.Thursday.push(time);
+                prevstate.Thursday.push(time);
             } else if (time.weekday === "Friday") {
-                week.Friday.push(time);
+                prevstate.Friday.push(time);
             } else {
                 console.log("Error");
             }
         });
+        setWeek(prevstate);
     };
 
     return (
@@ -43,7 +48,7 @@ const VarausPage = (props) => {
             <button onClick={() => console.log(week)}>
                 Step 3, Show Week Object with new dates
             </button>
-            {mounted && <Column setDisplay={props.setDisplay} week={week} />}
+            <Column setDisplay={props.setDisplay} week={week} />
         </div>
     );
 };

@@ -23,7 +23,7 @@ export const getTeacherById = (teacherId, weeknum, setData) => {
         )
         .then((response) => {
             setData(response.data);
-            console.log(response.data);
+            return response.data;
         })
         .catch((error) => {
             console.log(error);
