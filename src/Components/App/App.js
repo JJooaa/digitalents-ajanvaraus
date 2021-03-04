@@ -7,12 +7,13 @@ import FormPage from "../../Pages/Form-Page/Form-Page";
 
 const App = () => {
     const [display, setDisplay] = useState(0);
-
+    const [teacherId, setTeacherId] = useState(0);
+    
     return (
         <div>
             {display === 0 ? <FrontPage setDisplay={setDisplay} /> : null}
-            {display === 1 ? <TeacherPage setDisplay={setDisplay} /> : null}
-            {display === 2 ? <VarausPage setDisplay={setDisplay} /> : null}
+            {display === 1 ? <TeacherPage setDisplay={setDisplay} setTeacherId={setTeacherId} /> : null}
+            {display === 2 ? <VarausPage setDisplay={setDisplay} teacherId={teacherId} /> : null}
             {display === 3 ? <FormPage setDisplay={setDisplay} /> : null}
         </div>
     );

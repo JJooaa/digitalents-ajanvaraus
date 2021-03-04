@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Varaus-Page.css";
 import Column from "../../Components/Reservation Column/Column";
 import { getTeacherById } from "../../util/Api";
+import { getTeacherTimesById } from "../../util/Api";
 
 const VarausPage = (props) => {
     const [week, setWeek] = useState({
@@ -15,7 +16,7 @@ const VarausPage = (props) => {
     const sortDays = (response) => {
         let responseArray = [];
         responseArray.push(response);
-        let prevstate = {...week};
+        let prevstate = { ...week };
         responseArray[0].map((time) => {
             if (time.weekday === "Monday") {
                 prevstate.Monday.push(time);
@@ -35,9 +36,12 @@ const VarausPage = (props) => {
     };
 
     useEffect(() => {
-        getTeacherById(2, 0, sortDays);
-    }, [])
+        getTeacherById(props.teacherId, 0, sortDays);
+    }, []);
 
+    // Next Page functionality 
+    //-> Just call getTeacherById(props.teacherId, week, sortDays)
+    //With a different week
 
     return (
         <div className="xcontainer">

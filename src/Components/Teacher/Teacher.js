@@ -1,28 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Teacher.css";
-import { getTeacherById } from "../../util/Api";
 
 const Teacher = (props) => {
-    const teacherArray = ["Arto", "Else", "Tuukka", "Nina"];
-    
     return (
         <div className="teacher-flex-container">
-            {teacherArray.map((teacher) => {
+            {props.teacher.map((teacher) => {
                 return (
                     <div className="teacher-container">
-                        <p className="teacher-p">{teacher}</p>
+                        <p className="teacher-p">{teacher.first_name}</p>
                         <div className="teacher-picture"></div>
-                        <div
+                        <button
                             className="valitse-teacher-button"
-                            onClick={() => props.setDisplay(2)}
+                            id={teacher.id}
+                            onClick={(e) => {props.setTeacherId(e.target.id); props.setDisplay(2)}}
                         >
-                            <p className="valitse-button-p">Valitse</p>
-                        </div>
+                            Valitse
+                        </button>
                     </div>
                 );
             })}
         </div>
     );
 };
+
 
 export default Teacher;

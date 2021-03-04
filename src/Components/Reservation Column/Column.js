@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./Column.css";
 
-const Column = (props) => { 
+const Column = (props) => {
     return (
         <div className="reservation-container">
             {Object.entries(props.week).map((weekday) => {
@@ -16,7 +16,9 @@ const Column = (props) => {
                                     <p className="reservation-p">
                                         {time.start_time}
                                     </p>
-                                    <div className="varaa-nappula">Valitse</div>
+                                    <div className="varaa-nappula"
+                                    id={time.id}
+                                    onClick={(e) => console.log(e.target.id)}>Valitse</div>
                                 </div>
                             );
                         })}
