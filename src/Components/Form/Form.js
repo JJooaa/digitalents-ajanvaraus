@@ -1,7 +1,7 @@
 import React from "react";
 import "./Form.css";
 
-const Form = () => {
+const Form = (props) => {
     return (
         <div className="form-container">
             <h2 className="form-h2">Lisätiedot lomake</h2>
@@ -13,8 +13,8 @@ const Form = () => {
             <label>
                 <p className="label-p">Lisätietoa ( tapaamisen syy ) </p>
             </label>
-            <input type="text" placeholder={"Lisätietoa"}/>
-            <div className="center-button">
+            <input type="text" placeholder={"Lisätietoa"} />
+            <div className="center-button" onClick={() => props.setDisplay(4)}>
                 <p className="button-p">Lähetä</p>
             </div>
         </div>

@@ -2,10 +2,10 @@ import React from "react";
 import Form from "../../Components/Form/Form";
 
 
-const FormPage = () => {
+const FormPage = (props) => {
     return (
         <div>
-            <Form />
+            <Form setDisplay={props.setDisplay}/>
         </div>
     )
 };

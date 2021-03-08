@@ -17,9 +17,6 @@ const TeacherPage = (props) => {
                 setDisplay={props.setDisplay}
                 teacher={teacher}
             />
-            {props.teacherId > 0 ? (
-                <button onClick={() => props.setDisplay(2)}>Seuraava</button>
-            ) : null}
         </div>
     );
 };
