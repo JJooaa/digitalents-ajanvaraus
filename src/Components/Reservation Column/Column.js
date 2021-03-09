@@ -27,6 +27,7 @@ const Column = (props) => {
                                             id={time.id}
                                             onClick={(e) => {
                                                 console.log(e.target.id);
+                                                props.setPostRequest({reservableTime_id: e.target.id})
                                                 props.setDisplay(3);
                                             }}
                                         >

@@ -4,19 +4,29 @@ import "./Form.css";
 const Form = (props) => {
     return (
         <div className="form-container">
-            <h2 className="form-h2">Lisätiedot lomake</h2>
-            <label>
-                <p className="label-p">Nimi</p>
-            </label>
-            <input type="text" placeholder={"Nimi"} />
+            <form onSubmit={props.handleSubmit}>
+                <h2 className="form-h2">Lisää tietosi alla oleviin laatikoihin</h2>
+                <label>
+                    <p className="label-p">Nimi: (Etunimi, Sukunimi)</p>
+                    <input
+                        type="text"
+                        value={props.postRequest.reserver || ""}
+                        onChange={props.handleChange}
+                        name="reserver"
+                    />
+                </label>
+                <label>
+                    <p className="label-p">Lisätietoa: (tapaamisen syy)</p>
+                    <input
+                        type="text"
+                        value={props.postRequest.title || ""}
+                        onChange={props.handleChange}
+                        name="title"
+                    />
+                </label>
 
-            <label>
-                <p className="label-p">Lisätietoa ( tapaamisen syy ) </p>
-            </label>
-            <input type="text" placeholder={"Lisätietoa"} />
-            <div className="center-button" onClick={() => props.setDisplay(4)}>
-                <p className="button-p">Lähetä</p>
-            </div>
+                <input className="center-button"type="submit" value="Lähetä" />
+            </form>
         </div>
     );
 };

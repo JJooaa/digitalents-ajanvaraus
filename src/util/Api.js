@@ -31,6 +31,23 @@ export const getTeacherById = (teacherId, weeknum, sortDays) => {
         });
 };
 
+export const PostReservation = (reservationObject, setReturnReservation) => {
+    axios
+        .post(
+            `https://reservation.spudro.club/api/reservations`,
+            reservationObject,
+            {
+                headers: { "x-api-key": "A1LdkJaiEpQlLlNxAOQTuQrD90D1ex" },
+            }
+        )
+        .then((response) => {
+            console.log(response.data);
+            setReturnReservation(response.data);
+        })
+        .catch((error) => {
+            console.log(error);
+        });
+};
 
 /*
 export const getTeacherTimesById = async (teacherId, weeknum, sortDays) => {

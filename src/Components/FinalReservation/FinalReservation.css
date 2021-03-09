@@ -1,0 +1,8 @@
+.infobox-container {
+    width: 500px;
+    height: 500px; 
+    margin: 250px auto;
+    border: 1px solid black;
+    background-color: whitesmoke;
+};
+

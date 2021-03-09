@@ -53,7 +53,6 @@ const VarausPage = (props) => {
         setWeek(prevstate);
     };
 
-
     // When the page loads, get the current week for the chosen teacher.
     useEffect(() => {
         getTeacherById(props.teacherId, counter, sortDays);
@@ -61,7 +60,14 @@ const VarausPage = (props) => {
 
     return (
         <div className="xcontainer">
-            <Column setDisplay={props.setDisplay} week={week} setCount={setCount} counter={counter}/>
+            <Column
+                setDisplay={props.setDisplay}
+                week={week}
+                setCount={setCount}
+                counter={counter}
+                setPostRequest={props.setPostRequest}
+                postRequest={props.postRequest}
+            />
         </div>
     );
 };

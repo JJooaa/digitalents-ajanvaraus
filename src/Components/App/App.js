@@ -10,18 +10,40 @@ const App = () => {
     const [display, setDisplay] = useState(0);
     const [teacherId, setTeacherId] = useState(0);
     const [postRequest, setPostRequest] = useState({
-        id: "",
-        name: "",
-        description: "",
+        title: "",
+        reserver: "",
+        reservableTime_id: 0,
     });
-    
+    const [returnReservation, setReturnReservation] = useState([]);
+
     return (
         <div>
             {display === 0 ? <FrontPage setDisplay={setDisplay} /> : null}
-            {display === 1 ? <TeacherPage setDisplay={setDisplay} setTeacherId={setTeacherId} /> : null}
-            {display === 2 ? <VarausPage setDisplay={setDisplay} teacherId={teacherId} /> : null}
-            {display === 3 ? <FormPage setDisplay={setDisplay} /> : null}
-            {display === 4 ? <FinalPage />: null} 
+            {display === 1 ? (
+                <TeacherPage
+                    setDisplay={setDisplay}
+                    setTeacherId={setTeacherId}
+                />
+            ) : null}
+            {display === 2 ? (
+                <VarausPage
+                    setDisplay={setDisplay}
+                    setPostRequest={setPostRequest}
+                    postRequest={postRequest}
+                    teacherId={teacherId}
+                />
+            ) : null}
+            {display === 3 ? (
+                <FormPage
+                    setDisplay={setDisplay}
+                    setPostRequest={setPostRequest}
+                    postRequest={postRequest}
+                    setReturnReservation={setReturnReservation}
+                />
+            ) : null}
+            {display === 4 ? (
+                <FinalPage returnReservation={returnReservation} />
+            ) : null}
         </div>
     );
 };
