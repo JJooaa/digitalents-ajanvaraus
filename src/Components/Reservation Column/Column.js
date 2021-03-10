@@ -7,13 +7,13 @@ const Column = (props) => {
             <button onClick={() => props.setCount(props.counter - 1)}>Previous</button>
             <button onClick={() => props.setCount(props.counter + 1)}>Next Week</button>
             <div className="reservation-container">
-                {Object.entries(props.week).map((weekday) => {
+                {Object.entries(props.week).map((weekday, i) => {
                     return (
                         <div className="reservation-column">
                             <div className="date-container">
                                 <p className="date-p">{weekday[0]}</p>
                                 <p className="date-p">
-                                    {weekday[1][0] ? weekday[1][0].date : ""}
+                                    {props.currWeekDates[i]}
                                 </p>
                             </div>
                             {weekday[1].map((time) => {

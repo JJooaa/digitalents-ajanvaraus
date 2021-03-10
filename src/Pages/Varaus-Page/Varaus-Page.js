@@ -22,6 +22,16 @@ const VarausPage = (props) => {
         Friday: [],
     };
 
+    let currDay = new Date 
+    let currWeekDates = []
+    currDay.setDate(currDay.getDate()+counter*7)
+    
+    for (let i = 1; i <= 7; i++) {
+        let first = currDay.getDate() - currDay.getDay() + i 
+        let day = new Date(currDay.setDate(first)).toISOString().slice(0, 10)
+        currWeekDates.push(day)
+    }
+
     const sortDays = (response) => {
         let responseArray = [];
         //  Sorts the days in start_time order. So when they get pushed into their corresponding days, its automatically the earliest time first.
@@ -63,6 +73,7 @@ const VarausPage = (props) => {
             <Column
                 setDisplay={props.setDisplay}
                 week={week}
+                currWeekDates={currWeekDates}
                 setCount={setCount}
                 counter={counter}
                 setPostRequest={props.setPostRequest}
