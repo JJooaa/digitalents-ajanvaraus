@@ -3,9 +3,7 @@ import "./Column.css";
 
 const Column = (props) => {
     return (
-        <div className="asdas">
-            <button onClick={() => props.setCount(props.counter - 1)}>Previous</button>
-            <button onClick={() => props.setCount(props.counter + 1)}>Next Week</button>
+        <div className="">
             <div className="reservation-container">
                 {Object.entries(props.week).map((weekday) => {
                     return (
@@ -29,6 +27,8 @@ const Column = (props) => {
                                                 console.log(e.target.id);
                                                 props.setPostRequest({reservableTime_id: e.target.id})
                                                 props.setDisplay(3);
+                                                props.setChosenReservationTime(weekday[1][0].start_time);
+                                                props.setChosenReservationDate(weekday[1][0].date)
                                             }}
                                         >
                                             Valitse

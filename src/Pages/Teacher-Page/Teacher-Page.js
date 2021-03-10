@@ -16,6 +16,7 @@ const TeacherPage = (props) => {
                 setTeacherId={props.setTeacherId}
                 setDisplay={props.setDisplay}
                 teacher={teacher}
+                setTeacherName={props.setTeacherName}
             />
         </div>
     );

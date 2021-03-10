@@ -19,6 +19,7 @@
     display: block;
     margin: 15px auto;
     transition: background-color 0.2s ease-out;
+    text-align: center;
 }
 
 .valitse-teacher-button:hover {

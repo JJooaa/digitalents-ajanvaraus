@@ -12,9 +12,12 @@ const Teacher = (props) => {
                         <button
                             className="valitse-teacher-button"
                             id={teacher.id}
-                            onClick={(e) => {props.setTeacherId(e.target.id); props.setDisplay(2)}}
-                        >
-                            Valitse
+                            onClick={(e) => {
+                                props.setTeacherId(e.target.id);
+                                props.setTeacherName(teacher.first_name);
+                                props.setDisplay(2);
+                            }}
+                        >Valitse
                         </button>
                     </div>
                 );
@@ -22,6 +25,5 @@ const Teacher = (props) => {
         </div>
     );
 };
-
 
 export default Teacher;

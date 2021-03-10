@@ -3,6 +3,7 @@ import "./Varaus-Page.css";
 import Column from "../../Components/Reservation Column/Column";
 import { getTeacherById } from "../../util/Api";
 //import { getTeacherTimesById } from "../../util/Api";
+import ChangeWeekButtons from "../../Components/ChangeWeekButtons/ChangeWeekButtons";
 
 const VarausPage = (props) => {
     const [counter, setCount] = useState(0);
@@ -60,13 +61,26 @@ const VarausPage = (props) => {
 
     return (
         <div className="xcontainer">
+            <p className="ajanvaraus-p">
+                Ajanvaraus henkilölle: <span>{props.teacherName}</span>
+            </p>
+            <button
+                className="taaksepäin-button"
+                onClick={() => props.setDisplay(1)}
+            >
+                Taaksepäin
+            </button>
+            <p className="ajanvaraus-p">Viikko: {counter}</p>
+            <ChangeWeekButtons setCount={setCount} counter={counter} />
             <Column
                 setDisplay={props.setDisplay}
                 week={week}
                 setCount={setCount}
+                setChosenReservationDate={props.setChosenReservationDate}
                 counter={counter}
                 setPostRequest={props.setPostRequest}
                 postRequest={props.postRequest}
+                setChosenReservationTime={props.setChosenReservationTime}
             />
         </div>
     );

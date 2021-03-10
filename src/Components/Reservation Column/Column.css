@@ -43,3 +43,11 @@
 .varaa-nappula:hover {
     background-color: rgb(110, 110, 110);
 }
+
+.chooseweek-container {
+    width: 300px;
+    height: auto;
+    margin: 30px auto;
+    display: flex;
+    justify-content: space-between
+}

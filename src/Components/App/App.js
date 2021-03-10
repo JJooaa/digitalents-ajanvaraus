@@ -15,6 +15,9 @@ const App = () => {
         reservableTime_id: 0,
     });
     const [returnReservation, setReturnReservation] = useState([]);
+    const [teacherName, setTeacherName] = useState("");
+    const [chosenReservationTime, setChosenReservationTime] = useState([]);
+    const [chosenReservationDate, setChosenReservationDate] = useState([]);
 
     return (
         <div>
@@ -23,6 +26,7 @@ const App = () => {
                 <TeacherPage
                     setDisplay={setDisplay}
                     setTeacherId={setTeacherId}
+                    setTeacherName={setTeacherName}
                 />
             ) : null}
             {display === 2 ? (
@@ -31,6 +35,9 @@ const App = () => {
                     setPostRequest={setPostRequest}
                     postRequest={postRequest}
                     teacherId={teacherId}
+                    teacherName={teacherName}
+                    setChosenReservationTime={setChosenReservationTime}
+                    setChosenReservationDate={setChosenReservationDate}
                 />
             ) : null}
             {display === 3 ? (
@@ -39,6 +46,9 @@ const App = () => {
                     setPostRequest={setPostRequest}
                     postRequest={postRequest}
                     setReturnReservation={setReturnReservation}
+                    teacherName={teacherName}
+                    chosenReservationTime={chosenReservationTime}
+                    chosenReservationDate={chosenReservationDate}
                 />
             ) : null}
             {display === 4 ? (
