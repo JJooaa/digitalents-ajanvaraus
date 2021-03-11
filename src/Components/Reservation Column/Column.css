@@ -1,15 +1,17 @@
 .reservation-column {
     width: 273px;
     height: auto;
-    border: 2px solid black;
+    box-sizing: border-box;
+
 }
 
 .choose-time-container {
     border: 2px solid black;
     width: 230px;
     height: 53px;
-    margin: 15px auto;
+    margin: 20px auto;
     background-color: whitesmoke;
+    
 }
 
 .reservation-p {
@@ -18,15 +20,24 @@
     width: 115px;
 }
 
+.date-container{
+    border: 2px solid black;
+}
+
 .date-p {
     text-align: center;
     margin: 5px;
+    font-weight: 600;
 }
 
 .reservation-container {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    height: auto;
+    margin: 20px;
+    padding-top: 50px;
+    border-top: 2px solid black;
 }
 
 .varaa-nappula {
@@ -35,7 +46,7 @@
     padding: 6px;
     margin-left: 5px;
     background-color: lightgray;
-    transition: background-color 0.2s ease-in;
+    transition: background-color;
     cursor: pointer;
     border: 1px solid black;
 }

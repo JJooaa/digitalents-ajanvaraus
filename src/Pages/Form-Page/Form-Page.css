@@ -3,24 +3,4 @@
     justify-content: center;
 }
 
-.formflex-second {
-    height: 330px;
-    width: 500px;
-    text-align: left;
-    margin-top: 150px;
-    margin-right: 20px;
-    padding: 10px;
-    background-color: whitesmoke;
-    border-radius: 10px;
-}
-
-.form-h3 {
-    font-weight: normal;
-}
-
-.forminfo-h2 {
-    font-size: 25px;
-    margin: 0;
-    font-weight: normal;
-}
 

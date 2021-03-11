@@ -2,3 +2,11 @@ body {
     background: rgb(123, 188, 221);
     background: linear-gradient(90deg, rgb(190, 207, 216) 0%, rgb(114, 147, 163) 100%);
 }
+
+button {
+    outline: none;
+}
+
+button:focus {
+    outline: none;
+}
