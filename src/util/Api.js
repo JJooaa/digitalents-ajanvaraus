@@ -7,7 +7,6 @@ export const getTeachersFromServer = (setTeacher) => {
         })
         .then((response) => {
             setTeacher(response.data);
-            console.log(response.data);
         })
         .catch((error) => {
             console.log(error);
@@ -24,7 +23,6 @@ export const getTeacherById = (teacherId, weeknum, sortDays) => {
         )
         .then((response) => {
             sortDays(response.data);
-            console.log(response.data);
         })
         .catch((error) => {
             console.log(error);
@@ -41,7 +39,6 @@ export const PostReservation = (reservationObject, setReturnReservation) => {
             }
         )
         .then((response) => {
-            console.log(response.data);
             setReturnReservation(response.data);
         })
         .catch((error) => {

@@ -6,7 +6,7 @@ const Teacher = (props) => {
         <div className="teacher-flex-container">
             {props.teacher.map((teacher) => {
                 return (
-                    <div className="teacher-container">
+                    <div className="teacher-container" key={teacher.id}>
                         <p className="teacher-p">{teacher.first_name}</p>
                         <div className="teacher-picture"></div>
                         <button
@@ -17,7 +17,8 @@ const Teacher = (props) => {
                                 props.setTeacherName(teacher.first_name);
                                 props.setDisplay(2);
                             }}
-                        >Valitse
+                        >
+                            Valitse
                         </button>
                     </div>
                 );
