@@ -12,4 +12,5 @@
 
 .arrow-hover:hover {
     color: white;
+    cursor: pointer;
 }

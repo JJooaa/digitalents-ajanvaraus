@@ -7,8 +7,8 @@ const FinalReservation = (props) => {
     return (
         <div className="infobox-container">
             <p>Ajanvaraus on päivälle: {props.returnReservation.date}</p>
-            <p>Varattu aika kestää: {props.returnReservation.start_time} - {props.returnReservation.end_time}</p>
-            <p>Varaajan nimi: {props.returnReservation.reserver}</p>
+            <p>Kello: {props.returnReservation.start_time}</p>
+            <p>Ajanvaraus tehty henkilölle: {props.returnReservation.teacher_first_name} {props.returnReservation.teacher_last_name}</p>
             <p>Varauksen syy: {props.returnReservation.title}</p>
         </div>
     )

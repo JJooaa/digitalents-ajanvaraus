@@ -5,10 +5,41 @@ import "./Form-Page.css";
 import FormInfo from "../../Components/Form-Info/Form-Info";
 
 const FormPage = (props) => {
-    
+    // Validation for code, checks if inputs are valid.
+    const handleValidation = () => {
+        let formIsValid = true;
+        let formValues = props.postRequest;
+        let errors = {};
+
+        //Check for name, cant be empty and can only contain letters.
+        if(!formValues.reserver){
+            formIsValid = false;
+        }
+
+        if(typeof formValues.reserver !== "undefined") {
+            if(!formValues.reserver.match(/^[a-zA-Z]+$/)){
+                formIsValid = false;
+            }
+        }
+
+        //Check for title, can only contain letters and cant be empty.
+        if(!formValues.title) {
+            formIsValid = false;
+        }
+
+        if(typeof formValues.title !== "undefined") {
+            if(!formValues.title.match(/^[a-zA-Z]+$/)){
+                formIsValid = false;
+            }
+        }
+        return formIsValid;
+    };
+
     const handleSubmit = (event) => {
-        PostReservation(props.postRequest, props.setReturnReservation);
-        props.setDisplay(4);
+        if(handleValidation()) {
+            PostReservation(props.postRequest, props.setReturnReservation);
+            props.setDisplay(4);
+        };
         event.preventDefault();
     };
 
