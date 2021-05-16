@@ -1,8 +1,14 @@
 .ajanvaraus-p {
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: #044048;
 }
 
+.xcontainer {
+    margin-top: 100px;
+}
 span {
     font-weight: bold;
 }

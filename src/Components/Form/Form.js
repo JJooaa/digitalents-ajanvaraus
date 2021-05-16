@@ -5,10 +5,11 @@ const Form = (props) => {
     return (
         <div className="form-container">
             <form onSubmit={props.handleSubmit}>
-                <h2 className="form-h2">Lisää tietosi alla oleviin laatikoihin</h2>
                 <label>
-                    <p className="label-p">Nimi: (Etunimi, Sukunimi)</p>
+                    <p className="label-p padding1">Nimi</p>
                     <input
+                        autoComplete="off"
+                        spellCheck="false"
                         type="text"
                         value={props.postRequest.reserver || ""}
                         onChange={props.handleChange}
@@ -16,8 +17,10 @@ const Form = (props) => {
                     />
                 </label>
                 <label>
-                    <p className="label-p">Lisätietoa: (tapaamisen syy)</p>
-                    <input
+                    <p className="label-p padding2">Lisätietoa</p>
+                    <textarea
+                        autoComplete="off"
+                        spellCheck="false"
                         type="text"
                         value={props.postRequest.title || ""}
                         onChange={props.handleChange}
@@ -25,7 +28,7 @@ const Form = (props) => {
                     />
                 </label>
 
-                <input className="center-button"type="submit" value="Lähetä" />
+                <input className="center-button" type="submit" value="Lähetä" />
             </form>
         </div>
     );

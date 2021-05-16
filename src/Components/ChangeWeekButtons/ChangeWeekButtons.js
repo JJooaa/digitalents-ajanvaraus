@@ -4,8 +4,8 @@ import "./ChangeWeekButtons.css";
 const ChangeWeekButtons = (props) => {
     return (
         <div className="chooseweek-container">
-            <button
-                className="arrow-button"
+            <div
+                className="arrow-button-left"
                 onClick={() =>
                     props.setCount(
                         props.counter === 0
@@ -13,15 +13,11 @@ const ChangeWeekButtons = (props) => {
                             : props.counter - 1
                     )
                 }
-            >
-                <span className="arrow-hover">&#8592;</span>
-            </button>
-            <button
-                className="arrow-button"
+            ></div>
+            <div
+                className="arrow-button-right"
                 onClick={() => props.setCount(props.counter + 1)}
-            >
-                <span className="arrow-hover">&#8594;</span>
-            </button>
+            ></div>
         </div>
     );
 };

@@ -1,16 +1,24 @@
-.arrow-button {
-    font-size: 60px;
-    background-color: rgba(255, 255, 255, 0);
-    outline: none;
-    box-shadow: none;
-    border: 0;
-}
-
-.arrow-hover {
-    transition: color;
-}
-
-.arrow-hover:hover {
-    color: white;
+.arrow-button-right {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 35px solid #044048;
     cursor: pointer;
 }
+.arrow-button-right:hover {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent;
+    border-left: 35px solid grey;
+}
+
+.arrow-button-left {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right: 35px solid #044048;
+    cursor: pointer;
+}
+.arrow-button-left:hover {
+    border-top: 20px solid transparent;
+    border-bottom: 20px solid transparent; 
+    border-right: 35px solid grey;
+}
+

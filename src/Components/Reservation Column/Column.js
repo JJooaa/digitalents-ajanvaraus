@@ -9,7 +9,9 @@ const Column = (props) => {
                     <div className="reservation-column" key={i}>
                         <div className="date-container">
                             <p className="date-p">{weekday[0]}</p>
-                            <p className="date-p">{props.currWeekDates[i]}</p>
+                            <p className="date-p regular">
+                                {props.currWeekDates[i]}
+                            </p>
                         </div>
                         {weekday[1].map((time) => {
                             return (

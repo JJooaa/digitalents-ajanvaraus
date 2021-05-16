@@ -52,7 +52,13 @@ const App = () => {
                 />
             ) : null}
             {display === 4 ? (
-                <FinalPage returnReservation={returnReservation} />
+                <FinalPage
+                    returnReservation={returnReservation}
+                    chosenReservationDate={chosenReservationDate}
+                    chosenReservationTime={chosenReservationTime}
+                    teacherName={teacherName}
+                    setDisplay={setDisplay}
+                />
             ) : null}
         </div>
     );

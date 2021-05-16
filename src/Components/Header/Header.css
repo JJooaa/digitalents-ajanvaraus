@@ -1,0 +1,38 @@
+.headercont {
+    min-height: 182px;
+    width: 100%;
+    background-color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    align-items: center;
+    padding-right: 90px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: auto;
+    max-width: 100%;
+}
+
+.headertext {
+    color: #044048;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+@media only screen and (max-width: 1057px) {
+    .headercont {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-right: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .headertext {
+        font-size: 28px;
+    }
+}

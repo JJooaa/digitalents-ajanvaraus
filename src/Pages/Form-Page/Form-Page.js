@@ -3,6 +3,7 @@ import Form from "../../Components/Form/Form";
 import { PostReservation } from "../../util/Api";
 import "./Form-Page.css";
 import FormInfo from "../../Components/Form-Info/Form-Info";
+import Header from "../../Components/Header/Header";
 
 const FormPage = (props) => {
     // Validation for code, checks if inputs are valid.
@@ -12,23 +13,23 @@ const FormPage = (props) => {
         let errors = {};
 
         //Check for name, cant be empty and can only contain letters.
-        if(!formValues.reserver){
+        if (!formValues.reserver) {
             formIsValid = false;
         }
 
-        if(typeof formValues.reserver !== "undefined") {
-            if(!formValues.reserver.match(/^[a-zA-Z]+$/)){
+        if (typeof formValues.reserver !== "undefined") {
+            if (!formValues.reserver.match(/^[a-zA-Z]+$/)) {
                 formIsValid = false;
             }
         }
 
         //Check for title, can only contain letters and cant be empty.
-        if(!formValues.title) {
+        if (!formValues.title) {
             formIsValid = false;
         }
 
-        if(typeof formValues.title !== "undefined") {
-            if(!formValues.title.match(/^[a-zA-Z]+$/)){
+        if (typeof formValues.title !== "undefined") {
+            if (!formValues.title.match(/^[a-zA-Z]+$/)) {
                 formIsValid = false;
             }
         }
@@ -36,10 +37,10 @@ const FormPage = (props) => {
     };
 
     const handleSubmit = (event) => {
-        if(handleValidation()) {
+        if (handleValidation()) {
             PostReservation(props.postRequest, props.setReturnReservation);
             props.setDisplay(4);
-        };
+        }
         event.preventDefault();
     };
 
@@ -52,7 +53,8 @@ const FormPage = (props) => {
     };
 
     return (
-        <div>
+        <>
+            <Header />
             <div className="formflex-container">
                 <FormInfo
                     teacherName={props.teacherName}
@@ -67,7 +69,7 @@ const FormPage = (props) => {
                     handleChange={handleChange}
                 />
             </div>
-        </div>
+        </>
     );
 };
 

@@ -1,20 +1,58 @@
 .formflex-second {
-    height: 330px;
-    width: 500px;
+    height: 458px;
+    width: 410px;
     text-align: left;
-    margin-top: 150px;
-    margin-right: 20px;
-    padding: 10px;
-    background-color: whitesmoke;
-    border-radius: 10px;
+    margin-top: 20px;
 }
 
 .form-h3 {
     font-weight: normal;
+    color: #F7F7F7;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    margin: 0;
 }
 
 .forminfo-h2 {
-    font-size: 25px;
-    margin: 0;
+    font-size: 35px;
+    margin: 0px 0px 0px 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #044048;
+    display: flex;
+}
+
+.infocont {
+    width: 408px;
+    height: 173px;
+    box-sizing: border-box;
+    padding-left: 20px;
+}
+
+.detailscont {
+    width: 410px;
+    height: 229px;
+    background-color: #F7F7F7;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 45px;
+}
+
+.spannedtext {
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: normal;
+    font-size: 35px;
+}
+
+.p1 {
+    padding-left: 43px;
+}
+
+.p2 {
+    padding-left: 75px;
+}
+
+.p3 {
+    padding-left: 93px;
 }
