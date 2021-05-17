@@ -13,6 +13,19 @@
     margin: 0;
 }
 
+@media only screen and (max-width: 450px) {
+    .form-h3 {
+        font-size: 20px;
+        margin: 10px;
+    }
+
+    .infocont {
+        width: auto;
+        height: auto;
+    }
+}
+
+
 .forminfo-h2 {
     font-size: 35px;
     margin: 0px 0px 0px 25px;
@@ -30,7 +43,7 @@
 }
 
 .detailscont {
-    width: 410px;
+    max-width: 410px;
     height: 229px;
     background-color: #F7F7F7;
     display: flex;

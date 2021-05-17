@@ -1,5 +1,5 @@
 .form-container {
-    width: 410px;
+    max-width: 410px;
     height: 458px;
     background-color: #01AFC6;
     padding: 1px;
