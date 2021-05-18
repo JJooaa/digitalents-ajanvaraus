@@ -1,5 +1,5 @@
 .final-info-container {
-    width: 466px;
+    max-width: 466px;
     height: 323px;
     background-color: #01AFC6;
     margin: 70px auto;
@@ -10,7 +10,7 @@
 }
 
 .final-h2 {
-    margin: 0px;
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
     font-weight: bold;

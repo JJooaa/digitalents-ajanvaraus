@@ -20,20 +20,20 @@ const FormInfo = (props) => {
                 </h3>
             </div>
             <div className="detailscont">
-                <h2 className="forminfo-h2">
-                    Henkilö
+                <div className="detailsbox">
+                    <h2 className="forminfo-h2">Henkilö</h2>
                     <span className="spannedtext p1">{props.teacherName}</span>
-                </h2>
-                <h2 className="forminfo-h2">
-                    Päivä
+                </div>
+                <div className="detailsbox">
+                    <h2 className="forminfo-h2">Päivä</h2>
                     <span className="spannedtext p2">{format()}</span>
-                </h2>
-                <h2 className="forminfo-h2">
-                    Aika
+                </div>
+                <div className="detailsbox">
+                    <h2 className="forminfo-h2">Aika</h2>
                     <span className="spannedtext p3">
                         {props.chosenReservationTime}
                     </span>
-                </h2>
+                </div>
             </div>
         </div>
     );

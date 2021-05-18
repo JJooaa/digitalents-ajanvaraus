@@ -3,16 +3,22 @@
     justify-content: space-evenly;
     max-width: 956px;
     min-height: 539px;
-    margin: 100px auto;
+    margin: 0 auto;
     background-color: #044048;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 100px;
 }
 
-@media only screen and (max-width: 975px) {
+@media only screen and (max-width: 450px) {
     .formflex-container {
-        padding-bottom: 30px;
+        width: 100%;
     }
 }
 
+@media only screen and (max-width: 819px) {
+    .formflex-container {
+        padding-bottoM: 40px;
+    }
+}
 

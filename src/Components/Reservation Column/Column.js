@@ -3,7 +3,7 @@ import "./Column.css";
 
 const Column = (props) => {
     return (
-        <div className="reservation-container">
+        <div className="top-bar">
             {Object.entries(props.week).map((weekday, i) => {
                 return (
                     <div className="reservation-column" key={i}>

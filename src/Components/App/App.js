@@ -7,7 +7,7 @@ import FormPage from "../../Pages/Form-Page/Form-Page";
 import FinalPage from "../../Pages/FinalPage/FinalPage";
 
 const App = () => {
-    const [display, setDisplay] = useState(3);
+    const [display, setDisplay] = useState(0);
     const [teacherId, setTeacherId] = useState(0);
     const [postRequest, setPostRequest] = useState({
         title: "",
