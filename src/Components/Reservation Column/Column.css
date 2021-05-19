@@ -5,7 +5,7 @@
     height: 73px;
     margin: 0 auto;
     max-width: 1530px;
-    background-color: #01AFC6;
+    background-color: #01afc6;
 }
 
 .reservation-column {
@@ -14,10 +14,10 @@
     box-sizing: border-box;
 }
 
-.date-container{
+.date-container {
     max-width: auto;
     height: 73px;
-    background-color: #01AFC6;
+    background-color: #01afc6;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -28,7 +28,7 @@
     width: 100%;
     min-height: 80px;
     margin: 20px auto;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     display: flex;
     align-items: center;
     text-align: center;
@@ -49,14 +49,13 @@
     padding-right: 10px;
 }
 
-
 .date-p {
     text-align: center;
     margin: 0;
     font-weight: bold;
     font-size: 25px;
     font-family: Arial, Helvetica, sans-serif;
-    color: #F7F7F7;
+    color: #f7f7f7;
 }
 
 .regular {
@@ -70,13 +69,12 @@
     transition: background-color;
     cursor: pointer;
     border-radius: 19px;
-    color: #F7F7F7;
+    color: #f7f7f7;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 20px;
     text-align: center;
     box-sizing: border-box;
     padding-top: 8px;
-
 }
 
 .varaa-nappula:hover {
@@ -88,6 +86,6 @@
         width: 380px;
     }
     .top-bar {
-        background-color: #F7F7F7;
+        background-color: #f7f7f7;
     }
 }

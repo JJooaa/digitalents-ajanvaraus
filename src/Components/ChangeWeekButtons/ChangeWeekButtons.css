@@ -13,14 +13,14 @@
 
 .arrow-button-left {
     border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent; 
+    border-bottom: 20px solid transparent;
     border-right: 35px solid #044048;
     cursor: pointer;
     margin: 20px;
 }
 .arrow-button-left:hover {
     border-top: 20px solid transparent;
-    border-bottom: 20px solid transparent; 
+    border-bottom: 20px solid transparent;
     border-right: 35px solid grey;
 }
 
@@ -38,4 +38,3 @@
     color: #044048;
     font-weight: bold;
 }
-

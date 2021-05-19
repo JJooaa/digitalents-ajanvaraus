@@ -9,52 +9,11 @@ import Header from "../../Components/Header/Header";
 const VarausPage = (props) => {
     const [counter, setCount] = useState(0);
     const [week, setWeek] = useState({
-        Maanantai: [
-            {
-                date: "2021-05-10T00:00:00",
-                weekday: "Monday",
-                start_time: "09:30",
-                id: "56",
-            },
-            {
-                date: "2021-05-10T00:00:00",
-                weekday: "Monday",
-                start_time: "09:30",
-                id: "56",
-            },
-        ],
-        Tiistai: [
-            {
-                date: "2021-05-11T00:00:00",
-                weekday: "Tuesday",
-                start_time: "11:30",
-                id: "56",
-            },
-        ],
-        Keskiviikko: [
-            {
-                date: "2021-05-12T00:00:00",
-                weekday: "Wednesday",
-                start_time: "12:30",
-                id: "56",
-            },
-        ],
-        Torstai: [
-            {
-                date: "2021-05-13T00:00:00",
-                weekday: "Thursday",
-                start_time: "14:30",
-                id: "56",
-            },
-        ],
-        Perjantai: [
-            {
-                date: "2021-03-14T00:00:00",
-                weekday: "Friday",
-                start_time: "10:30",
-                id: "56",
-            },
-        ],
+        Maanantai: [],
+        Tiistai: [],
+        Keskiviikko: [],
+        Torstai: [],
+        Perjantai: [],
     });
 
     const unmodifiedWeek = {
@@ -65,6 +24,7 @@ const VarausPage = (props) => {
         Perjantai: [],
     };
 
+    // GENERATE DAYS FOR THE YEAR.
     let currDay = new Date();
     let currWeekDates = [];
     currDay.setDate(currDay.getDate() + counter * 7);
@@ -109,7 +69,7 @@ const VarausPage = (props) => {
         setWeek(prevstate);
     };
 
-    // When the page loads, get the current week for the chosen teacher.
+    // When the page loads, get the current week for the chosen teacher. Also update everytime counter changes so we fetch the data for next week.
     useEffect(() => {
         getTeacherById(props.teacherId, counter, sortDays);
     }, [counter]);
@@ -126,9 +86,7 @@ const VarausPage = (props) => {
                     setDisplay={props.setDisplay}
                     week={week}
                     currWeekDates={currWeekDates}
-                    setCount={setCount}
                     setChosenReservationDate={props.setChosenReservationDate}
-                    counter={counter}
                     setPostRequest={props.setPostRequest}
                     postRequest={props.postRequest}
                     setChosenReservationTime={props.setChosenReservationTime}

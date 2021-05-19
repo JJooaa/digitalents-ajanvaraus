@@ -19,10 +19,11 @@ const App = () => {
     });
     //
     const [returnReservation, setReturnReservation] = useState([]);
-    // Showing Teacher name
+    // For displaying teachers name
     const [teacherName, setTeacherName] = useState("");
-    // 
+    // For displaying the chosen reservation time
     const [chosenReservationTime, setChosenReservationTime] = useState([]);
+    // For displaying the chosen reservation date.
     const [chosenReservationDate, setChosenReservationDate] = useState([]);
 
     return (
@@ -39,8 +40,6 @@ const App = () => {
                 <VarausPage
                     setDisplay={setDisplay}
                     setPostRequest={setPostRequest}
-                    postRequest={postRequest}
-                    teacherId={teacherId}
                     teacherName={teacherName}
                     setChosenReservationTime={setChosenReservationTime}
                     setChosenReservationDate={setChosenReservationDate}

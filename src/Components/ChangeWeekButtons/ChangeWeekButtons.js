@@ -17,9 +17,7 @@ const ChangeWeekButtons = (props) => {
                     )
                 }
             ></div>
-            <p className="current-week">
-                {currentWeekNumber + props.counter}
-            </p>
+            <p className="current-week">{currentWeekNumber + props.counter}</p>
             <div
                 className="arrow-button-right"
                 onClick={() => props.setCount(props.counter + 1)}

@@ -37,7 +37,9 @@ const FinalPage = (props) => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => console.log(props.returnReservation)}>ASD</button>
+            <button onClick={() => console.log(props.returnReservation)}>
+                ASD
+            </button>
             <div className="etusivulle" onClick={() => props.setDisplay(0)}>
                 Etusivulle
             </div>
