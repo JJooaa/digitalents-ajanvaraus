@@ -18,24 +18,26 @@ const FinalPage = (props) => {
             <h2 className="final-header">Varauksesi on suoritettu!</h2>
             <div className="final-info-container">
                 <h2 className="final-h2">Varauksen tiedot</h2>
-                <div className="detailscont nomargin">
-                    <h2 className="forminfo-h2">
-                        Henkilö{" "}
+                <div className="detailscont nomargin final">
+                    <div className="detailsbox">
+                        <h2 className="forminfo-h2">Henkilö</h2>
                         <span className="spannedtext p1">
                             {props.teacherName}
                         </span>
-                    </h2>
-                    <h2 className="forminfo-h2">
-                        Päivä <span className="spannedtext p2">{format()}</span>
-                    </h2>
-                    <h2 className="forminfo-h2">
-                        Aika{" "}
+                    </div>
+                    <div className="detailsbox">
+                        <h2 className="forminfo-h2">Päivä</h2>
+                        <span className="spannedtext p2">{format()}</span>
+                    </div>
+                    <div className="detailsbox">
+                        <h2 className="forminfo-h2">Aika</h2>
                         <span className="spannedtext p3">
                             {props.chosenReservationTime}
                         </span>
-                    </h2>
+                    </div>
                 </div>
             </div>
+            <button onClick={() => console.log(props.returnReservation)}>ASD</button>
             <div className="etusivulle" onClick={() => props.setDisplay(0)}>
                 Etusivulle
             </div>

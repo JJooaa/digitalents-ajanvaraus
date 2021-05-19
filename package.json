@@ -7,13 +7,12 @@
     "@testing-library/react": "^11.2.5",
     "@testing-library/user-event": "^12.7.1",
     "axios": "^0.21.1",
-    "current-week-number": "^1.0.7",
+    "dotenv": "^9.0.2",
     "moment": "^2.29.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.2",
-    "web-vitals": "^1.1.0",
-    "weeknumber": "^1.1.2"
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
