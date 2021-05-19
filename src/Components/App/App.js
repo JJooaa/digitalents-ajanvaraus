@@ -7,15 +7,21 @@ import FormPage from "../../Pages/Form-Page/Form-Page";
 import FinalPage from "../../Pages/FinalPage/FinalPage";
 
 const App = () => {
+    // Decides what page to display
     const [display, setDisplay] = useState(0);
+    // Teacher id when choosing teacher, then display available times for that id.
     const [teacherId, setTeacherId] = useState(0);
+    // Used for the form page, reservableTime_id when choosing a time.
     const [postRequest, setPostRequest] = useState({
         title: "",
         reserver: "",
         reservableTime_id: 0,
     });
+    //
     const [returnReservation, setReturnReservation] = useState([]);
+    // Showing Teacher name
     const [teacherName, setTeacherName] = useState("");
+    // 
     const [chosenReservationTime, setChosenReservationTime] = useState([]);
     const [chosenReservationDate, setChosenReservationDate] = useState([]);
 
