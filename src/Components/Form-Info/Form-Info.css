@@ -63,25 +63,26 @@
     padding-left: 93px;
 }
 
-@media only screen and (max-width: 450px) {
-}
 
 @media only screen and (max-width: 375px) {
     .p1 {
-        padding-left: 23px;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
     }
     .p2 {
-        padding-left: 40px;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
     }
     .p3 {
-        padding-left: 60px;
+        font-size: 28px;
+        display: flex;
+        align-items: center;
     }
     .forminfo-h2 {
         margin: 0px 0px 0px 10px;
     }
-}
-
-@media only screen and (max-width: 450px) {
 }
 
 @media only screen and (max-width: 819px) {

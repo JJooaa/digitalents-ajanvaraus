@@ -8,12 +8,55 @@ import Header from "../../Components/Header/Header";
 
 const VarausPage = (props) => {
     const [counter, setCount] = useState(0);
+    // In this build I've added template data to a state that handles holding the api data. 
+    // So the functionality for getting nexts weeks data is not there.
     const [week, setWeek] = useState({
-        Maanantai: [],
-        Tiistai: [],
-        Keskiviikko: [],
-        Torstai: [],
-        Perjantai: [],
+        Maanantai: [
+            {
+                date: "2021-05-10T00:00:00",
+                weekday: "Monday",
+                start_time: "09:30",
+                id: "56",
+            },
+            {
+                date: "2021-05-10T00:00:00",
+                weekday: "Monday",
+                start_time: "09:30",
+                id: "56",
+            },
+        ],
+        Tiistai: [
+            {
+                date: "2021-05-11T00:00:00",
+                weekday: "Tuesday",
+                start_time: "11:30",
+                id: "56",
+            },
+        ],
+        Keskiviikko: [
+            {
+                date: "2021-05-12T00:00:00",
+                weekday: "Wednesday",
+                start_time: "12:30",
+                id: "56",
+            },
+        ],
+        Torstai: [
+            {
+                date: "2021-05-13T00:00:00",
+                weekday: "Thursday",
+                start_time: "14:30",
+                id: "56",
+            },
+        ],
+        Perjantai: [
+            {
+                date: "2021-03-14T00:00:00",
+                weekday: "Friday",
+                start_time: "10:30",
+                id: "56",
+            },
+        ],
     });
 
     const unmodifiedWeek = {
