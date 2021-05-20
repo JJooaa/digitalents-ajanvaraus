@@ -17,10 +17,18 @@ const ChangeWeekButtons = (props) => {
                     )
                 }
             ></div>
-            <p className="current-week">{currentWeekNumber + props.counter}</p>
+            <p className="current-week">
+                Viikko {currentWeekNumber + props.counter}
+            </p>
             <div
                 className="arrow-button-right"
-                onClick={() => props.setCount(props.counter + 1)}
+                onClick={() =>
+                    props.setCount(
+                        currentWeekNumber + props.counter < 52
+                            ? props.counter + 1
+                            : props.counter + 0
+                    )
+                }
             ></div>
         </div>
     );
