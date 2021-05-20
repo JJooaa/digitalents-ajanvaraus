@@ -27,6 +27,9 @@
     font-size: 45px;
     color: #ffffff;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .valitse-teacher-button:hover {
