@@ -8,7 +8,7 @@ import Header from "../../Components/Header/Header";
 
 const VarausPage = (props) => {
     const [counter, setCount] = useState(0);
-    // In this build I've added template data to a state that handles holding the api data. 
+    // In this build I've added template data to a state that handles holding the api data.
     // So the functionality for getting nexts weeks data is not there.
     const [week, setWeek] = useState({
         Maanantai: [
@@ -67,6 +67,9 @@ const VarausPage = (props) => {
         Perjantai: [],
     };
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     // GENERATE DAYS FOR THE YEAR.
     let currDay = new Date();
     let currWeekDates = [];

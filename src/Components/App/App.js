@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 import FrontPage from "../../Pages/Front-Page/FrontPage";
 import TeacherPage from "../../Pages/Teacher-Page/Teacher-Page";

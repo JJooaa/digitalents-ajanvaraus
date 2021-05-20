@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./FinalPage.css";
 import Header from "../../Components/Header/Header";
 
 const FinalPage = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const format = () => {
         let formatDate = props.chosenReservationDate;
         let dd = formatDate.slice(8, 10);
