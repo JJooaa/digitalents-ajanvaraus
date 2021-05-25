@@ -9,6 +9,7 @@ const TeacherPage = (props) => {
 
     useEffect(() => {
         getTeachersFromServer(setTeacher);
+        window.scrollTo(0, 0);
     }, []);
 
     return (

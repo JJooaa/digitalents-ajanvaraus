@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Form from "../../Components/Form/Form";
 import { PostReservation } from "../../util/Api";
 import "./Form-Page.css";
@@ -6,6 +6,9 @@ import FormInfo from "../../Components/Form-Info/Form-Info";
 import Header from "../../Components/Header/Header";
 
 const FormPage = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     // Validation for code, checks if inputs are valid.
     const handleValidation = () => {
         let formIsValid = true;

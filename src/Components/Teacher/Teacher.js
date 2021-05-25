@@ -2,9 +2,19 @@ import React, { useState, useEffect } from "react";
 import "./Teacher.css";
 
 const Teacher = (props) => {
+    // Placeholder for testing. No backend for this one, so hard coded info. 
+    const teachers = {
+        joa: [
+            {first_name: "Person1"},
+            {first_name: "Person2"},
+            {first_name: "Person3"},
+            {first_name: "Person4"}
+        ]
+    };
+
     return (
         <div className="teacher-flex-container">
-            {props.teacher.map((teacher) => {
+            {teachers.joa.map((teacher) => {
                 return (
                     <div className="teacher-container" key={teacher.id}>
                         <p className="teacher-p">{teacher.first_name}</p>

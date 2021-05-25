@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./FinalPage.css";
 import Header from "../../Components/Header/Header";
 
 const FinalPage = (props) => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
     const format = () => {
         let formatDate = props.chosenReservationDate;
         let dd = formatDate.slice(8, 10);
@@ -37,9 +40,6 @@ const FinalPage = (props) => {
                     </div>
                 </div>
             </div>
-            <button onClick={() => console.log(props.returnReservation)}>
-                ASD
-            </button>
             <div className="etusivulle" onClick={() => props.setDisplay(0)}>
                 Etusivulle
             </div>
