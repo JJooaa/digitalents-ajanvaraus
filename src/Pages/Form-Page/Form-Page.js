@@ -21,7 +21,7 @@ const FormPage = (props) => {
         }
 
         if (typeof formValues.reserver !== "undefined") {
-            if (!formValues.reserver.match(/^[a-zA-Z]+$/)) {
+            if (!formValues.reserver.match(/^[a-zA-ZåöäÅÖÄ]+$/)) {
                 formIsValid = false;
             }
         }
@@ -32,7 +32,7 @@ const FormPage = (props) => {
         }
 
         if (typeof formValues.title !== "undefined") {
-            if (!formValues.title.match(/^[a-zA-Z]+$/)) {
+            if (!formValues.title.match(/^[a-zA-ZåöäÅÖÄ]+$/)) {
                 formIsValid = false;
             }
         }
